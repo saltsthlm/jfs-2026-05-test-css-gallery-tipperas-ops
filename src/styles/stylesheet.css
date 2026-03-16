@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bitcount+Grid+Single+Ink:wght@100..900&family=Delius&family=Flamenco:wght@300;400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oldenburg&display=swap");
+
+:root {
+  --background: #f4f4f4;
+  --foreground: #f6e4f6;
+  --primary: #f6bdd1;
+  --secondary: #c98986;
+  --tertiary: #8b575c;
+}
+
+.header {
+  height: 200px; /* fixed header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+  background-color: var(--foreground);
+  text-align: center; /* this line is for h2, other wise it wouldent be alined */
+  gap: 1rem;
+}
+
+.header h1 {
+  margin: 0%;
+  font-family: "Flamenco", cursive;
+  font-size: 48px;
+}
+
+.header h2 {
+  margin: 0%;
+  font-family: "Flamenco", cursive;
+}
+
+.nav-buttons {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  /* padding: 8px; */
+  /* background-color: #f6bdd1; */
+}
+
+.section1 {
+  background-color: var(--background);
+  padding: 8px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section1 h2 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.section1 hr {
+  border: none; /* remove default border */
+  height: 3px; /* thickness of the line */
+  background-color: var(--foreground); /* line color */
+  width: 100%; /* full width */
+  margin-top: 0;
+  margin-bottom: 2%; /* spacing */
+}
+
+.section1__article {
+  width: 300px; /* fixed phone-like width */
+  height: auto; /* fixed height */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+  background-color: var(--background);
+}
+
+.section1__article img {
+  width: 100%; /* fill the article width */
+  height: 200px;
+  object-fit: cover;
+}
+
+.section1__article h2 {
+  object-fit: cover;
+  justify-content: left; /* vertical center */
+  align-items: left;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-family: "Flamenco", cursive;
+}
+
+.section1__article p {
+  justify-content: left; /* vertical center */
+  align-items: left;
+  text-align: left;
+  padding-left: 10px;
+  font-family: "Flamenco", cursive;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  /* gap: 20px; */
+}
+
+.buttons button {
+  /* justify-content: left; vertical center */
+  align-items: left;
+
+  background-color: var(--foreground); /* fin gul färg */
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 32px; /* mer horisontell padding för ovalt utseende */
+  border: none;
+  border-radius: 50px; /* stor border-radius = oval */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease;
+}
+
+@media (min-width: 1024px) {
+  .nav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-buttons button {
+    justify-content: left; /* vertical center */
+    align-items: left;
+    background-color: var(--foreground); /* fin gul färg */
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 32px; /* mer horisontell padding för ovalt utseende */
+    border: none;
+    border-radius: 50px; /* stor border-radius = oval */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease;
+  }
+
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--background);
+  }
+  .section1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .section1__article {
+    flex: 1 1 calc(25% - 20px);
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    gap: 50px;
+  }
+}
