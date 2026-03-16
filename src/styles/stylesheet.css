@@ -46,6 +46,7 @@
 .section1 {
   background-color: var(--background);
   padding: 8px;
+  padding-bottom: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -65,11 +66,11 @@
   background-color: var(--foreground); /* line color */
   width: 100%; /* full width */
   margin-top: 0;
-  margin-bottom: 5%; /* spacing */
+  margin-bottom: 2%; /* spacing */
 }
 
 .section1__article {
-  width: 360px; /* fixed phone-like width */
+  width: 300px; /* fixed phone-like width */
   height: auto; /* fixed height */
   margin: 0 auto;
   display: flex;
@@ -81,11 +82,8 @@
 
 .section1__article img {
   width: 100%; /* fill the article width */
-  max-height: 30vh; /* make it shorter */
+  height: 200px;
   object-fit: cover;
-  justify-content: center;
-  align-items: center;
-  height: auto;
 }
 
 .section1__article h2 {
@@ -109,11 +107,13 @@
   display: flex;
   flex-direction: row;
   padding-left: 10px;
-  gap: 50px;
+  padding-right: 10px;
+  justify-content: space-between;
+  /* gap: 20px; */
 }
 
 .buttons button {
-  justify-content: left; /* vertical center */
+  /* justify-content: left; vertical center */
   align-items: left;
 
   background-color: var(--foreground); /* fin gul färg */
@@ -151,18 +151,27 @@
   }
 
   .main {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: var(--background);
   }
   .section1 {
-    flex-direction: row; /* switch to row */
-    flex-wrap: wrap; /* allow multiple rows */
-    justify-content: space-between; /* spread out articles */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .section1__article {
-    flex: 1 1 calc(25% - 20px); /* 4 articles per row */
-    max-width: none; /* let flex control width */
+    flex: 1 1 calc(25% - 20px);
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    gap: 50px;
   }
 }
